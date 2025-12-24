@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: layout_dang_ky.xml -->
+<!-- Mô tả: Giao diện cho màn hình đăng ký tài khoản mới, được thiết kế lại. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#E3F2FD"
+    tools:context=".le_hong_son.ManHinhDangKy">
+
+    <!-- Tiêu đề của màn hình -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tạo Tài Khoản Mới\nNHÓM 4 / LE HONG SON"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/design_default_color_primary"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Form đăng ký -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Ô nhập Họ tên -->
+            <EditText
+                android:id="@+id/edtHoTen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="Họ và tên"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Ô nhập Số điện thoại -->
+            <EditText
+                android:id="@+id/edtSDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="Nhập số điện thoại"
+                android:inputType="phone"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Ô nhập Email -->
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Ô nhập Mật khẩu -->
+            <EditText
+                android:id="@+id/edtMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Ô nhập lại Mật khẩu -->
+            <EditText
+                android:id="@+id/edtXacNhanMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="Nhập lại mật khẩu"
+                android:inputType="textPassword"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Nút Đăng ký -->
+    <Button
+        android:id="@+id/btnDangKy"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Đăng ký"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        app:cornerRadius="12dp"/>
+
+    <!-- Link quay về màn hình Đăng nhập -->
+    <TextView
+        android:id="@+id/tvQuayLaiDangNhap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đã có tài khoản? Quay lại đăng nhập"
+        android:textColor="@color/design_default_color_primary"
+        android:layout_marginTop="24dp"
+        android:padding="8dp"/>
+
+</LinearLayout>

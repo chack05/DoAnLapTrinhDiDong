@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: layout_dang_nhap.xml -->
+<!-- Mô tả: Giao diện cho màn hình đăng nhập, được thiết kế lại theo phong cách hiện đại, tinh gọn. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#E3F2FD"
+    tools:context=".le_hong_son.ManHinhDangNhap">
+
+    <!-- Tiêu đề và Logo của ứng dụng -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CRM Login\nNHÓM 4 / LE HONG SON"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/design_default_color_primary"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Khối form đăng nhập được bao bọc trong CardView để tạo hiệu ứng nổi và bo góc -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Ô nhập Email -->
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@android:drawable/ic_dialog_email"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Ô nhập Mật khẩu -->
+            <EditText
+                android:id="@+id/edtMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:drawableStart="@android:drawable/ic_lock_lock"
+                android:drawablePadding="12dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Nút Đăng nhập -->
+    <Button
+        android:id="@+id/btnDangNhap"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Đăng nhập"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        app:cornerRadius="12dp"/>
+
+    <!-- Link chuyển sang màn hình Đăng ký -->
+    <TextView
+        android:id="@+id/tvChuyenDangKy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chưa có tài khoản? Đăng ký ngay"
+        android:textColor="@color/design_default_color_primary"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: item_san_pham.xml -->
+<!-- Layout cho một item trong danh sách sản phẩm -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/item_background_selector"
+    android:gravity="center_vertical">
+
+    <!-- Ảnh sản phẩm thu nhỏ -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
+        <ImageView
+            android:id="@+id/ivHinhAnhItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Thông tin sản phẩm -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp">
+
+        <!-- Tên sản phẩm -->
+        <TextView
+            android:id="@+id/tvTenSanPhamItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Sản Phẩm"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <!-- Mã sản phẩm -->
+        <TextView
+            android:id="@+id/tvMaSanPhamItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã: SP001"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Giá sản phẩm -->
+        <TextView
+            android:id="@+id/tvGiaItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50,000 VND"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Mũi tên chỉ sang phải -->
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@android:drawable/ic_media_play"
+        app:tint="#BDBDBD" />
+
+</LinearLayout>

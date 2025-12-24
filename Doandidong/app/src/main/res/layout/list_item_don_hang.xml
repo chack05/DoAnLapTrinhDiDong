@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout cho một item trong danh sách lịch sử đơn hàng -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@android:color/white">
+
+    <!-- LinearLayout chứa ID đơn hàng và ngày đặt -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- TextView hiển thị Mã đơn hàng -->
+        <TextView
+            android:id="@+id/tvMaDonHang"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Mã ĐH: #12345"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <!-- TextView hiển thị ngày đặt hàng -->
+        <TextView
+            android:id="@+id/tvNgayDat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12/12/2025"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- TextView hiển thị tên khách hàng -->
+    <TextView
+        android:id="@+id/tvTenKhachHangLichSu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khách hàng: Nguyễn Văn A"
+        android:textSize="15sp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- TextView hiển thị tổng tiền của đơn hàng -->
+    <TextView
+        android:id="@+id/tvTongTienLichSu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền: 5,000,000 VND"
+        android:textSize="16sp"
+        android:textColor="#C62828"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

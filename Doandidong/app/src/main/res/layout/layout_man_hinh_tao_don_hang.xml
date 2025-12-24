@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: activity_man_hinh_tao_don_hang.xml -->
+<!-- Layout chính cho màn hình tạo đơn hàng, đã được đồng bộ toolbar và thêm các thành phần UI -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F8">
+
+    <!-- Toolbar tùy chỉnh đã được đồng bộ -->
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/layout_toolbar_con" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Khối chọn Khách hàng -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chọn khách hàng:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+            <Spinner
+                android:id="@+id/spinnerKhachHang"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/spinner_background"/>
+
+            <!-- Khối chọn Sản phẩm và số lượng -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thêm sản phẩm:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <Spinner
+                    android:id="@+id/spinnerSanPham"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/spinner_background"/>
+
+                <EditText
+                    android:id="@+id/edtSoLuong"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="SL"
+                    android:inputType="number"
+                    android:text="1"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:minHeight="48dp"/>
+
+                <Button
+                    android:id="@+id/btnThemSanPhamVaoDon"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:text="Thêm"
+                    android:backgroundTint="#007BFF"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <!-- Tiêu đề và RecyclerView cho Chi tiết đơn hàng -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chi tiết đơn hàng"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGioHang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Khối Tổng tiền -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginBottom="24dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tổng tiền:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginEnd="8dp"/>
+                <TextView
+                    android:id="@+id/tvTongTien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 VNĐ"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#D32F2F"/>
+            </LinearLayout>
+
+            <!-- Nút Lưu Đơn Hàng -->
+            <Button
+                android:id="@+id/btnLuuDon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LƯU ĐƠN HÀNG"
+                android:textSize="18sp"
+                android:backgroundTint="#28a745"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

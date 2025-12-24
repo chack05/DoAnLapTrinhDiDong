@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:elevation="4dp">
+
+    <!-- Nút Back (ImageButton) ở bên trái -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_arrow_back_white"
+        android:contentDescription="Nút quay lại" />
+
+    <!-- Tiêu đề (TextView) ở giữa -->
+    <TextView
+        android:id="@+id/tvTieuDe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Tiêu đề"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Nút Xuất Excel (ImageButton) ở bên phải -->
+    <ImageButton
+        android:id="@+id/btnXuatExcel"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_excel"
+        android:tint="@android:color/white"
+        android:contentDescription="Xuất dữ liệu ra Excel"
+        android:visibility="gone"/> <!-- Mặc định ẩn, sẽ hiện khi cần -->
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File: nav_menu.xml -->
+<!-- Mô tả: Định nghĩa các mục menu cho Navigation Drawer của màn hình chính. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!-- Nhóm các mục chức năng chính -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_home"
+            android:title="Trang chủ Admin" />
+        <item
+            android:id="@+id/nav_khach_hang"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Quản lý Khách hàng" />
+        <item
+            android:id="@+id/nav_san_pham"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Quản lý Sản phẩm" />
+        <item
+            android:id="@+id/nav_danh_muc"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Quản lý Danh mục" />
+        <item
+            android:id="@+id/nav_don_hang"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Quản lý Đơn hàng" />
+        <item
+            android:id="@+id/nav_lich_su"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="Lịch sử" />
+    </group>
+
+    <!-- Mục Đăng xuất, tách biệt khỏi nhóm trên -->
+    <item android:title="Tài khoản">
+        <menu>
+            <item
+                android:id="@+id/nav_dang_xuat"
+                android:icon="@android:drawable/ic_menu_delete"
+                android:title="Đăng xuất" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name=".database.AppDatabase"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Doandidong"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".ManHinhDangNhap"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Khai báo các Activity cần thiết -->
+        <activity android:name=".le_hong_son.ManHinhDangKy" />
+        <activity android:name=".main.ManHinhChinh" />
+        <activity android:name=".le_hong_son.ManHinhTrangChuUser" />
+
+        <activity android:name=".nguyen_van_dai.ManHinhThemSanPham" />
+        <activity android:name=".nguyen_van_dai.ManHinhSuaSanPham" />
+        <activity android:name=".do_duc_anh.ManHinhThemKhach" />
+        <activity android:name=".do_duc_anh.ManHinhSuaKhach" />
+        <activity android:name=".mai_duc_phi_son.ManHinhLichSu" />
+        <activity android:name=".phan_thanh_tai.ManHinhTaoDonHang" />
+        <activity android:name=".phan_thanh_tai.ManHinhQuanLyDonHang" />
+        <activity android:name=".phan_thanh_tai.ManHinhSuaDon" />
+        <activity android:name=".phan_thanh_tai.ManHinhChiTietDon" />
+        <activity android:name=".le_hong_son.ManHinhDanhSachDanhMuc" />
+        <activity android:name=".le_hong_son.ManHinhThemDanhMuc" />
+        <activity android:name=".le_hong_son.ManHinhSuaDanhMuc" />
+        <activity android:name=".do_duc_anh.ManHinhDanhSachKhach" />
+        <activity android:name=".nguyen_van_dai.ManHinhSanPham" />
+        <activity android:name=".nguyen_van_dai.ManHinhChiTietSanPham" />
+
+    </application>
+
+</manifest>

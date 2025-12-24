@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Màu sắc cho trạng thái đơn hàng -->
+    <color name="orange_status">#FF9800</color> <!-- Chờ xác nhận -->
+    <color name="blue_status">#2196F3</color>   <!-- Đang giao -->
+    <color name="green_status">#4CAF50</color>   <!-- Thành công -->
+    <color name="red_status">#F44336</color>     <!-- Đã hủy (hoặc màu xám tùy chọn) -->
+    <color name="gray_status">#9E9E9E</color>     <!-- Màu xám chung -->
+</resources>
