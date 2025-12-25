@@ -156,6 +156,7 @@ class ManHinhTrangChuUser : AppCompatActivity(), NavigationView.OnNavigationItem
                     // Khi nút "Chi tiết" được nhấn, mở màn hình chi tiết sản phẩm
                     val intent = Intent(this@ManHinhTrangChuUser, ManHinhChiTietSanPham::class.java)
                     intent.putExtra("PRODUCT_ID", product.id)
+                    intent.putExtra("IS_ADMIN", false) // Thêm cờ không phải admin
                     startActivity(intent)
                 }
             )

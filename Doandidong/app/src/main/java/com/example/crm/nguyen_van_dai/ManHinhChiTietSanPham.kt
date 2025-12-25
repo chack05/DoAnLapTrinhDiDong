@@ -49,6 +49,7 @@ class ManHinhChiTietSanPham : AppCompatActivity() {
     // --- Khai báo biến logic ---
     private lateinit var db: AppDatabase
     private var productId: Int = -1
+    private var isUserAdmin: Boolean = false // Cờ để xác định quyền admin
     private var currentProduct: Product? = null
     private lateinit var commentAdapter: CommentAdapter // Adapter cho bình luận
 
@@ -58,6 +59,7 @@ class ManHinhChiTietSanPham : AppCompatActivity() {
 
         db = AppDatabase.getDatabase(this)
         productId = intent.getIntExtra("PRODUCT_ID", -1)
+        isUserAdmin = intent.getBooleanExtra("IS_ADMIN", false) // Lấy cờ admin từ Intent
 
         setControl()
         setupCommentRecyclerView() // Cài đặt RecyclerView cho bình luận
@@ -77,13 +79,7 @@ class ManHinhChiTietSanPham : AppCompatActivity() {
         }
     }
 
-    // Hàm kiểm tra xem người dùng hiện tại có phải là Admin không
-    private fun isAdmin(): Boolean {
-        val sharedPreferences = getSharedPreferences("MY_PREFS", Context.MODE_PRIVATE)
-        val userEmail = sharedPreferences.getString("EMAIL", null)
-        // Giả định email admin là "admin@gmail.com". Có thể mở rộng bằng cách lưu role trong SharedPreferences.
-        return userEmail == "admin@gmail.com"
-    }
+    // Hàm kiểm tra xem người dùng hiện tại có phải là Admin không -> ĐÃ BỊ XÓA, THAY BẰNG isUserAdmin
 
     // Hàm ánh xạ View
     private fun setControl() {
@@ -106,8 +102,8 @@ class ManHinhChiTietSanPham : AppCompatActivity() {
         btnSubmitComment = findViewById(R.id.btnSubmitComment)
         rvComments = findViewById(R.id.rvComments)
 
-        // Ẩn/hiện nút xóa và sửa sản phẩm dựa trên quyền admin
-        if (isAdmin()) {
+        // Ẩn/hiện nút xóa và sửa sản phẩm dựa trên cờ isUserAdmin
+        if (isUserAdmin) {
             btnXoaSanPham.visibility = View.VISIBLE
             btnSuaSanPham.visibility = View.VISIBLE
         } else {

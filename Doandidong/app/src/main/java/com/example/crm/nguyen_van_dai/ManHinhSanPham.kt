@@ -103,6 +103,7 @@ class ManHinhSanPham : AppCompatActivity() {
         productAdapter = ProductAdapter(emptyList()) { product ->
             val intent = Intent(this, ManHinhChiTietSanPham::class.java)
             intent.putExtra("PRODUCT_ID", product.id)
+            intent.putExtra("IS_ADMIN", true) // Thêm cờ admin
             startActivity(intent)
         }
         recyclerView.layoutManager = LinearLayoutManager(this)
